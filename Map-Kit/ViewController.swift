@@ -29,12 +29,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.startUpdatingLocation()
         
 
+        let jhb = Capital(coordinate: CLLocationCoordinate2D(latitude: 28.0400245, longitude: -26.1715215), info: "Capital of UK")
+        
+        mapView.addAnnotation(jhb)
     }
 
 
     //called everytime location changes
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+        /**
         // shortcuts
         guard let value = manager.location?.coordinate else { return }
         let latitude = value.latitude
@@ -53,7 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         annotation.coordinate = pin
         annotation.title = "Your Location"
         self.mapView.addAnnotation(annotation)
-        
+         */
     }
 }
 
